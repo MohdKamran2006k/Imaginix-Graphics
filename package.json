@@ -1,0 +1,23 @@
+{
+  "name": "imaginix-graphics",
+  "version": "1.0.0",
+  "description": "Na",
+  "main": "app.js",
+  "scripts": {
+    "build": "@tailwindcss -i ./style.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohdKamran2006k/Imaginix-Graphics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohdKamran2006k/Imaginix-Graphics/issues"
+  },
+  "homepage": "https://github.com/MohdKamran2006k/Imaginix-Graphics#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
