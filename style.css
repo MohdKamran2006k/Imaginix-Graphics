@@ -1,1 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-Main: "Archivo", sans-serif; 
+  --font-Second: "Montserrat", sans-serif; 
+  --font-third: "Merriweather", sans-serif; 
+  --color-bordercolor: #767676;
+  --color-maincolor: #3300cc;
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+}

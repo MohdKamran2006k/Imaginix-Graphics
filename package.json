@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/MohdKamran2006k/Imaginix-Graphics#readme",
   "dependencies": {
-    "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/cli": "^4.2.1"
+  },
+  "devDependencies": {
     "tailwindcss": "^4.2.1"
   }
 }

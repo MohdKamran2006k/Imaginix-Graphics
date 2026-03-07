@@ -1,4 +1,5 @@
 /*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,15 +8,17 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-300: oklch(80.8% 0.114 19.571);
-    --color-red-600: oklch(57.7% 0.245 27.325);
-    --color-red-800: oklch(44.4% 0.177 26.899);
-    --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-green-800: oklch(44.8% 0.119 151.328);
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-Main: "Archivo", sans-serif;
+    --font-Second: "Montserrat", sans-serif;
+    --color-bordercolor: #767676;
+    --color-maincolor: #3300cc;
   }
 }
 @layer base {
@@ -167,47 +170,67 @@
   }
 }
 @layer utilities {
-  .table {
-    display: table;
+  .flex {
+    display: flex;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
-  .resize {
-    resize: both;
+  .w-1\/2 {
+    width: calc(1 / 2 * 100%);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .text-8xl {
-    font-size: var(--text-8xl);
-    line-height: var(--tw-leading, var(--text-8xl--line-height));
+  .border-bordercolor {
+    border-color: var(--color-bordercolor);
   }
-  .text-green-800 {
-    color: var(--color-green-800);
+  .bg-maincolor {
+    background-color: var(--color-maincolor);
   }
-  .text-red-300 {
-    color: var(--color-red-300);
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
   }
-  .text-red-600 {
-    color: var(--color-red-600);
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
-  .text-red-800 {
-    color: var(--color-red-800);
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
-  .underline {
-    text-decoration-line: underline;
+  .font-Main {
+    font-family: var(--font-Main);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .font-Second {
+    font-family: var(--font-Second);
   }
-  .text-shadow-red-800 {
-    --tw-text-shadow-color: oklch(44.4% 0.177 26.899);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-text-shadow-color: color-mix(in oklab, var(--color-red-800) var(--tw-text-shadow-alpha), transparent);
-    }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+}
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
   }
 }
 @property --tw-border-style {
@@ -215,27 +238,15 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-outline-style {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
-}
-@property --tw-text-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-text-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
-      --tw-text-shadow-color: initial;
-      --tw-text-shadow-alpha: 100%;
+      --tw-font-weight: initial;
     }
   }
 }
