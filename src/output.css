@@ -11,7 +11,10 @@
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xs: 20rem;
+    --container-sm: 24rem;
     --container-xl: 36rem;
+    --container-2xl: 42rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -24,6 +27,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -220,6 +225,18 @@
   .table {
     display: table;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-1\/2 {
+    height: calc(1 / 2 * 100%);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-3\/4 {
+    height: calc(3 / 4 * 100%);
+  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -229,8 +246,14 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-22 {
     height: calc(var(--spacing) * 22);
+  }
+  .h-28 {
+    height: calc(var(--spacing) * 28);
   }
   .h-36 {
     height: calc(var(--spacing) * 36);
@@ -258,6 +281,9 @@
   }
   .w-2\/3 {
     width: calc(2 / 3 * 100%);
+  }
+  .w-2xl {
+    width: var(--container-2xl);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -289,8 +315,14 @@
   .w-full {
     width: 100%;
   }
+  .w-sm {
+    width: var(--container-sm);
+  }
   .w-xl {
     width: var(--container-xl);
+  }
+  .w-xs {
+    width: var(--container-xs);
   }
   .flex-shrink {
     flex-shrink: 1;
@@ -444,11 +476,17 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -464,6 +502,9 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
@@ -492,6 +533,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
